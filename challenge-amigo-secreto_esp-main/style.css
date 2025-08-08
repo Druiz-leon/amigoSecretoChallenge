@@ -1,0 +1,205 @@
+:root {
+  --color-primary: #2ecc71; /* fondo */
+  --color-secondary: #ecf9f1; /* caja */
+  --color-tertiary: #bdc3c7; /* botón secundario */
+  --color-button: #27ae60;
+  --color-button-hover: #1e8449;
+  --color-text: #2c3e50;
+  --color-white: #ffffff;
+  --color-success: #2ecc71;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-primary);
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.main-content {
+  width: 100%;
+  max-width: 800px;
+  background-color: var(--color-secondary);
+  border-radius: 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Banner */
+.header-banner {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 40px 20px 20px;
+  text-align: center;
+}
+
+.main-title {
+  font-size: 48px;
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.header-banner img {
+  width: 120px;
+  height: auto;
+}
+
+/* Input Section */
+.input-section {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+}
+
+.input-wrapper {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto 20px;
+  width: 100%;
+}
+
+.input-name {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid #000;
+  border-radius: 25px 0 0 25px;
+  font-size: 16px;
+  outline: none;
+}
+
+.button-add {
+  background-color: var(--color-tertiary);
+  color: var(--color-text);
+  border-radius: 0 25px 25px 0;
+  border: 2px solid #000;
+  padding: 12px 24px;
+  transition: background-color 0.3s;
+}
+
+.button-add:hover {
+  background-color: #95a5a6;
+}
+
+/* Lista de nombres */
+.name-list {
+  margin-top: 20px;
+  text-align: left;
+  padding-left: 0;
+}
+
+.name-list li {
+  background-color: #d5f5e3;
+  margin: 5px 0;
+  padding: 10px 15px;
+  border-radius: 12px;
+  font-size: 18px;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Resultado del sorteo */
+.result-list {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--color-success);
+}
+
+/* Botones */
+.button-container {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón sortear */
+.button-draw {
+  background-color: var(--color-button);
+  color: var(--color-white);
+}
+
+.button-draw:hover {
+  background-color: var(--color-button-hover);
+}
+
+/* Botón borrar */
+.button-clear {
+  background-color: #e74c3c;
+  color: var(--color-white);
+}
+
+.button-clear:hover {
+  background-color: #c0392b;
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .input-wrapper {
+    flex-direction: column;
+  }
+
+  .input-name,
+  .button-add {
+    width: 100%;
+    border-radius: 25px;
+  }
+
+  .button-add {
+    margin-top: 10px;
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
